@@ -1,16 +1,25 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.container{
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0a0552;
+    background: linear-gradient(122deg, rgba(10, 5, 82, 1) 2%, rgba(9, 50, 121, 1) 20%, rgba(0, 212, 255, 1) 92%);
+
+
+}
+.toDoApp{
     height: 10vmin;
     width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding-top: 2vmin;
-    background-color: #FFF3F6;
+
 }
 
 .box{
@@ -20,6 +29,7 @@
     border-radius: 1vmin;
     padding-left: 12px;
     background: #FFF9FB;
+    
 }
 
 .button{
@@ -38,4 +48,48 @@
     width: 7vmin;
     background: #C8E6C9;
     background: linear-gradient(90deg, rgba(200, 230, 201, 1) 0%, rgba(165, 214, 167, 1) 50%, rgba(129, 199, 132, 1) 99%);
+}
+
+.list {
+    margin-top: 30px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: black;
+    gap: 20px;
+}
+
+
+.list i {
+  font-size: 28px; 
+}
+
+ul li{
+    list-style: none;
+    font-size:17px;
+    cursor: pointer;
+    user-select: none;
+    background: white;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+   
+}
+
+li:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+
+
+}
+
+.input-row {
+    display: flex;            
+    align-items: center;
+}
+
+#list-container {
+    margin-top: 20px;        
+    width: 50vw;
 }
