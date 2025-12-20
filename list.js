@@ -18,7 +18,7 @@ function addTask() {
   icon.className = "fa-solid fa-trash";
 
   label.appendChild(checkbox);
-  label.append(" " + taskText);
+  label.append("     " + taskText);
 
   li.appendChild(label);
   li.appendChild(icon);
@@ -29,28 +29,33 @@ function addTask() {
   
 
   // click anywhere on li
-  li.addEventListener("click", () => {
-    checkbox.checked = !checkbox.checked;
-    li.classList.toggle("completed", checkbox.checked);
+ li.addEventListener("click", () => {
+  checkbox.checked = !checkbox.checked;
+  updateStyle();
+});
+
+
+checkbox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+label.addEventListener("click", (e) => e.stopPropagation()); 
+
+checkbox.addEventListener("change", () => {
+  updateStyle();
+});
+
+function updateStyle() {
+  if (checkbox.checked) {
+    li.classList.add("completed");
     li.style.backgroundColor = "#E6FFE6";
-
     li.style.color = "#00A300";
-
-  });
-
-  li.addEventListener("click",()=>{
-      if(!checkbox.checked){
-        li.style.backgroundColor = "";
-
-        li.style.color = "";
-      }
-  });
-
-
-   
-
-  // prevent double toggle
-  checkbox.addEventListener("click", (e) => e.stopPropagation());
+  } else {
+    li.classList.remove("completed");
+    li.style.backgroundColor = "";
+    li.style.color = "";
+  }
+}
 
   // delete task
  
