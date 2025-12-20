@@ -58,6 +58,9 @@ function updateStyle() {
 }
 
   // delete task
+  icon.addEventListener("click",()=>{
+    li.remove()
+  });
  
 }
 
