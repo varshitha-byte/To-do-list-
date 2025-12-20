@@ -36,7 +36,7 @@ body {
     height: 6.5vmin;
     width: 6.5vmin;
     border-radius: 5vmin;
-    background: #FADADD;
+    background: rgb(4, 46, 120);
     background: linear-gradient(90deg, rgba(250, 218, 221, 1) 0%, rgba(244, 194, 194, 1) 50%, rgba(230, 166, 176, 1) 99%);
     cursor: pointer;
     font-size: 5vmin;
@@ -73,7 +73,12 @@ ul li{
     padding: 10px 15px;
     margin-bottom: 15px;
     border-radius: 8px;
-   
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+
+
 }
 
 li:hover {
